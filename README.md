@@ -1,111 +1,38 @@
-# My Dashboard
+# Wardline | Hospital Operations
 
-A polished analytics dashboard built in Vue 3 and Vuetify to surface key business trends in a clean, executive-friendly layout.
+Wardline is a responsive hospital operations dashboard for monitoring occupied beds, available capacity, admission mix, and staffing alignment across three facilities.
 
-## Live demo
+## Features
 
-- Production: https://my-dashboard-omega-roan.vercel.app
-- Repository: https://github.com/RachelOlmsted/my-dashboard
+- Day, week, month, and year views from daily records. Day view compares 14 consecutive days; week view shows seven days; month view shows each day; year view aggregates to 12 monthly averages.
+- Year overlays for 2024, 2025, and 2026.
+- Facility filters for St. Jude General, Metro Health Center, and Valley Children's Hospital.
+- Network summary for average occupied beds, utilization, open beds, and staffing coverage.
+- Occupancy trend lines by facility, stacked admission-reason bars, open-bed area chart with a 10% critical threshold, and a dual-axis staffing comparison.
+- Locally generated, deterministic sample data. No API or backend is required.
 
-## Overview
+## Stack
 
-This dashboard is designed to help teams quickly understand business performance across the year. It brings together revenue, visitor growth, conversion rate, and order volume into one streamlined view that feels like a modern admin panel or ecommerce reporting dashboard.
-
-The experience is intentionally minimal and high-contrast, with a modern dark default theme, spacious card layouts, and chart-driven storytelling that makes the data easy to scan at a glance.
-
-## Highlights
-
-- Full-year and single-month filtering
-- Summary KPI cards for revenue, visitors, conversions, and orders
-- Revenue bar chart for monthly performance
-- Visitors line chart for trend analysis
-- Conversion area chart for efficiency tracking
-- Light/dark theme toggle
-- Responsive layout for desktop and mobile screens
-- Local JSON-powered data model with no external API dependency
-
-## Tech stack
-
-- Vue 3
-- TypeScript
+- Vue 3 and TypeScript
 - Vite
-- Vuetify 3
-- Chart.js
-- vue-chartjs
+- Chart.js with vue-chartjs
 
-## Dataset
+## Data and aggregation
 
-The dashboard uses a local dataset stored in src/data/metrics.json with monthly metrics for 2025, including:
+`src/data/hospitals_data.json` defines facility capacities, monthly occupancy adjustments, reason mix, staffing ratios, and year-level adjustments. `src/data/hospitalAnalytics.ts` expands those profiles into daily records for 2024–2026 and aggregates the selected date range, facilities, and years for the dashboard.
 
-- revenue
-- visitors
-- conversions
-- orders
+All values are illustrative and should not be used for operational decisions. The current model produces daily snapshots; the day view compares consecutive dates rather than inventing hourly measurements.
 
-This makes the project easy to demo, iterate on, and extend without setting up a backend.
-
-## Project structure
-
-```text
-my-dashboard/
-├── src/
-│   ├── data/
-│   │   └── metrics.json
-│   ├── views/
-│   │   └── HomeView.vue
-│   ├── App.vue
-│   ├── main.ts
-│   └── router/
-│       └── index.ts
-├── public/
-├── index.html
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-├── README.md
-└── .gitignore
-```
-
-## Getting started
-
-Install dependencies:
+## Development
 
 ```bash
 npm install
-```
-
-Run the app locally:
-
-```bash
 npm run dev
 ```
 
-Create a production build:
+Create and preview a production build:
 
 ```bash
 npm run build
-```
-
-Preview the production build:
-
-```bash
 npm run preview
 ```
-
-## Design intent
-
-The app follows a clean, premium analytics aesthetic with:
-
-- a dark-first visual system
-- generous whitespace
-- soft chart colors that stay cohesive and readable
-- clear hierarchy between summary stats and trend charts
-- a practical dashboard-first layout optimized for business insights
-
-## Notes
-
-This project was built to follow the brief for a single-page business dashboard, with functionality centered on data visibility, monthly filtering, and a minimal presentation that feels polished enough for portfolio and client-facing storytelling.
-
-## License
-
-This project is intended for demo and portfolio use.

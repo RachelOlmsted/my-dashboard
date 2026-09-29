@@ -1,0 +1,62 @@
+{
+  "hospitals": [
+    {
+      "id": "st-jude",
+      "name": "St. Jude General",
+      "color": "#397ca5",
+      "capacity": 340,
+      "baseOccupancy": 0.79,
+      "monthlyAdjustments": [0.02, 0.01, 0.015, 0.005, -0.005, -0.015, -0.025, -0.02, -0.005, 0.005, 0.025, 0.035],
+      "reasonMix": { "emergency": 0.34, "surgery": 0.27, "infectious": 0.18, "chronic": 0.21 },
+      "staffPerOccupiedBed": 0.76,
+      "phase": 0.4
+    },
+    {
+      "id": "metro-health",
+      "name": "Metro Health Center",
+      "color": "#148679",
+      "capacity": 275,
+      "baseOccupancy": 0.84,
+      "monthlyAdjustments": [0.015, 0.005, 0.01, 0, -0.005, -0.02, -0.03, -0.025, -0.01, 0.005, 0.02, 0.03],
+      "reasonMix": { "emergency": 0.31, "surgery": 0.3, "infectious": 0.16, "chronic": 0.23 },
+      "staffPerOccupiedBed": 0.8,
+      "phase": 2.1
+    },
+    {
+      "id": "valley-childrens",
+      "name": "Valley Children's Hospital",
+      "color": "#d47342",
+      "capacity": 210,
+      "baseOccupancy": 0.75,
+      "monthlyAdjustments": [0.025, 0.015, 0.01, 0.005, 0, -0.015, -0.025, -0.02, -0.005, 0.005, 0.02, 0.04],
+      "reasonMix": { "emergency": 0.36, "surgery": 0.2, "infectious": 0.22, "chronic": 0.22 },
+      "staffPerOccupiedBed": 0.83,
+      "phase": 4.3
+    }
+  ],
+  "annualAdjustments": [
+    { "year": 2024, "occupancy": -0.025, "staffing": -0.018, "emergency": 0.015, "infectious": 0.02 },
+    { "year": 2025, "occupancy": 0, "staffing": 0.008, "emergency": 0, "infectious": 0 },
+    { "year": 2026, "occupancy": 0.018, "staffing": -0.012, "emergency": -0.012, "infectious": -0.015 }
+  ],
+  "sampleRecords": [
+    { "date": "2024-01-08", "hospitalId": "st-jude", "occupiedBeds": 267, "openBeds": 73, "reasons": { "emergency": 92, "surgery": 72, "infectious": 48, "chronic": 55 }, "staffedFtes": 198.4, "requiredFtes": 203.0 },
+    { "date": "2024-01-08", "hospitalId": "metro-health", "occupiedBeds": 222, "openBeds": 53, "reasons": { "emergency": 69, "surgery": 67, "infectious": 35, "chronic": 51 }, "staffedFtes": 174.2, "requiredFtes": 177.6 },
+    { "date": "2024-01-08", "hospitalId": "valley-childrens", "occupiedBeds": 157, "openBeds": 53, "reasons": { "emergency": 56, "surgery": 31, "infectious": 35, "chronic": 35 }, "staffedFtes": 128.5, "requiredFtes": 130.3 },
+    { "date": "2024-08-17", "hospitalId": "st-jude", "occupiedBeds": 254, "openBeds": 86, "reasons": { "emergency": 88, "surgery": 68, "infectious": 43, "chronic": 55 }, "staffedFtes": 189.0, "requiredFtes": 193.0 },
+    { "date": "2024-08-17", "hospitalId": "metro-health", "occupiedBeds": 216, "openBeds": 59, "reasons": { "emergency": 67, "surgery": 65, "infectious": 34, "chronic": 50 }, "staffedFtes": 169.1, "requiredFtes": 172.8 },
+    { "date": "2024-08-17", "hospitalId": "valley-childrens", "occupiedBeds": 151, "openBeds": 59, "reasons": { "emergency": 55, "surgery": 30, "infectious": 34, "chronic": 32 }, "staffedFtes": 122.7, "requiredFtes": 125.3 },
+    { "date": "2025-03-06", "hospitalId": "st-jude", "occupiedBeds": 276, "openBeds": 64, "reasons": { "emergency": 95, "surgery": 75, "infectious": 48, "chronic": 58 }, "staffedFtes": 212.3, "requiredFtes": 209.8 },
+    { "date": "2025-03-06", "hospitalId": "metro-health", "occupiedBeds": 236, "openBeds": 39, "reasons": { "emergency": 73, "surgery": 71, "infectious": 38, "chronic": 54 }, "staffedFtes": 190.1, "requiredFtes": 188.8 },
+    { "date": "2025-03-06", "hospitalId": "valley-childrens", "occupiedBeds": 164, "openBeds": 46, "reasons": { "emergency": 59, "surgery": 33, "infectious": 36, "chronic": 36 }, "staffedFtes": 137.3, "requiredFtes": 136.1 },
+    { "date": "2025-07-22", "hospitalId": "st-jude", "occupiedBeds": 262, "openBeds": 78, "reasons": { "emergency": 90, "surgery": 71, "infectious": 46, "chronic": 55 }, "staffedFtes": 200.6, "requiredFtes": 199.1 },
+    { "date": "2025-07-22", "hospitalId": "metro-health", "occupiedBeds": 228, "openBeds": 47, "reasons": { "emergency": 71, "surgery": 68, "infectious": 37, "chronic": 52 }, "staffedFtes": 183.8, "requiredFtes": 182.4 },
+    { "date": "2025-07-22", "hospitalId": "valley-childrens", "occupiedBeds": 153, "openBeds": 57, "reasons": { "emergency": 55, "surgery": 31, "infectious": 34, "chronic": 33 }, "staffedFtes": 127.5, "requiredFtes": 127.0 },
+    { "date": "2026-03-06", "hospitalId": "st-jude", "occupiedBeds": 281, "openBeds": 59, "reasons": { "emergency": 96, "surgery": 76, "infectious": 49, "chronic": 60 }, "staffedFtes": 210.6, "requiredFtes": 213.6 },
+    { "date": "2026-03-06", "hospitalId": "metro-health", "occupiedBeds": 241, "openBeds": 34, "reasons": { "emergency": 75, "surgery": 72, "infectious": 39, "chronic": 55 }, "staffedFtes": 189.4, "requiredFtes": 192.8 },
+    { "date": "2026-03-06", "hospitalId": "valley-childrens", "occupiedBeds": 170, "openBeds": 40, "reasons": { "emergency": 61, "surgery": 34, "infectious": 37, "chronic": 38 }, "staffedFtes": 138.5, "requiredFtes": 141.1 },
+    { "date": "2026-09-29", "hospitalId": "st-jude", "occupiedBeds": 273, "openBeds": 67, "reasons": { "emergency": 93, "surgery": 74, "infectious": 48, "chronic": 58 }, "staffedFtes": 205.0, "requiredFtes": 207.5 },
+    { "date": "2026-09-29", "hospitalId": "metro-health", "occupiedBeds": 233, "openBeds": 42, "reasons": { "emergency": 72, "surgery": 70, "infectious": 37, "chronic": 54 }, "staffedFtes": 184.0, "requiredFtes": 186.4 },
+    { "date": "2026-09-29", "hospitalId": "valley-childrens", "occupiedBeds": 160, "openBeds": 50, "reasons": { "emergency": 58, "surgery": 32, "infectious": 35, "chronic": 35 }, "staffedFtes": 131.2, "requiredFtes": 132.8 }
+  ]
+}
